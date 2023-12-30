@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <meta charset="UTF-8" />
+  </head>
+  <style>
+    body {
+      margin: 10px 20px 30px 40px;
+    }
+  </style>
+  <body>
+    <h1>Univariate Linear Regression (단변수 선형회귀)</h1>
+    <button type="button" class="btn btn-primary" onclick="toggleVisor()">
+      Toggle Visor</button
+    ><br /><br />
+    <div id="model-status">No trained model</div>
+    <div id="testing-status"></div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      id="train-button"
+      onclick="train()"
+    >
+      Train New Model</button
+    ><br /><br />
+    <input id="predict-input" placeholder="2000" />
+    <button
+      type="button"
+      class="btn btn-primary"
+      id="predict-button"
+      disabled
+      onclick="predict()"
+    >
+      Predict new Data</button
+    ><br />
+    <div id="predict-output"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
